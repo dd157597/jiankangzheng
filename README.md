@@ -1,1 +1,6 @@
-# jiankangzheng
+# 电子健康证
+使用代码编辑工具如Notepad++ 编辑index.HTML 
+查找 姓名 性别 年龄 编号 体检日期 身份证号码 
+到  images 文件夹tiMCpNK_tp.jpg修改成自己的白底证件照注意文件格式
+如果是其他城市 需要到  images 文件夹修改tiw9nFC_.png成自己城市的社区卫生服务中心
+保存后在本地环境 V信任意聊天窗口打开127.0.0.1截图
