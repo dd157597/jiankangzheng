@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0"> 
+  <title>下载电子健康证</title> 
+  <link rel="stylesheet" href="css/weui.min.css"> 
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> 
+  <script type="text/javascript" src="js/qrcode.min.js"></script> 
+  <script type="text/javascript" src="js/g.js"></script> 
+  <script type="text/javascript" src="js/html2canvas.js"></script> 
+  <!-- html2canvas不兼容ie 需要引入bluebird.js--> 
+  <script type="text/javascript" src="js/bluebird.js"></script> 
+  <script type="text/javascript" src="js/binding.js"></script> 
+  <style>
+    body{
+        background: #F3F3F3;
+        padding-top: 15px;
+    }
+    .positive{
+        width: 332px;
+        margin: 0 auto;
+        background: #fff;
+        position: relative;
+        border-radius: 11px;
+        border:1.5px solid #000
+    }
+    .posTit{
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #0a0d53;
+        padding: 4px 0;
+        border-bottom: 2px solid #272D99;
+        margin: 0;
+    }
+    .name{
+        width: 66%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .fontstyle{
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: bold;
+        line-height: 21px;
+        color: #050850;
+        opacity: 1;
+        margin: 0;
+        margin-top: 3px;
+    }
+    .fontstyle p{
+        width: auto;
+        margin: 0;
+        display: inline-block;
+        color: #000;
+    }
+    .people{
+        margin-left: 20px;
+    }
+    .headportrait{
+        width: 90px;
+        height: 115px;
+        background: #000;
+        position: absolute;
+        right: 10px;
+        top: 42px;
+    }
+    .zhang{
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        right: 119px;
+        top: 91px;
+    }
+    .lins{
+        height: 2px;
+        background: #272D99;
+        width: 100%;
+    }
+    .linss{
+        height: 2px;
+        background: #fff;
+        width: 100%;
+    }
+    .footer{
+        height: 23px;
+        background: #272D99;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 0 0 11px 11px;
+        font-size: 12px;
+    }
+    .names{
+        font-size: 11px;
+        line-height: 14px;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        width: 40%;
+        float: left;
+        line-height: 14px;
+    }
+    ul li:nth-child(2n){
+        width: 60%;
+    }
+    li span{
+        font-size: 12px;
+    }
+</style>
+ </head>  
+ <body> 
+  <div class="navdemo"> 
+   <div class="positive"> 
+    <p class="posTit">从业人员健康合格证明</p> 
+    <div class="people"> 
+     <div class="name"> 
+      <div class="fontstyle">
+       类别: 
+       <p>食品</p> 
+      </div> 
+      <div class="fontstyle" style="width: 46px;text-align: left;">
+       性别: 
+       <p>男</p> 
+      </div> 
+     </div> 
+     <div class="name"> 
+      <div class="fontstyle">
+       姓名: 
+       <p>魏鹏飞</p> 
+      </div> 
+      <div class="fontstyle" style="width: 46px;text-align: left;">
+       年龄: 
+       <p>33</p> 
+      </div> 
+     </div> 
+     <div class="name"> 
+      <div class="fontstyle">
+       编号: 
+       <p>5001030142023A01020</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div style="display: flex;padding-left: 20px;"> 
+     <div id="qrcode" style="width: 75px;height: 75px;"></div> 
+     <div> 
+      <div class="name" style="width: 100%;"> 
+       <div class="fontstyle">
+        体检日期: 
+        <p>2023-08-16</p> 
+       </div> 
+      </div> 
+      <div class="name" style="width: 100%;"> 
+       <div class="fontstyle">
+        有效期一年 
+       </div> 
+      </div> 
+      <div class="name" style="width: 100%;"> 
+       <div class="fontstyle">
+        身份证号: 
+        <p>500230199101251342</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <img class="headportrait" src="/images/tiMCpNK_tp.jpg" alt="" srcset=""> 
+    <img class="zhang" src="/images/tiw9nFC_.png" alt="" srcset=""> 
+    <p class="lins"></p> 
+    <p class="linss"></p> 
+    <div class="footer">
+     发证机构：渝中区石油路街道社区卫生服务中心
+    </div> 
+   </div> 
+   <div class="positive" style="margin-top: 15px;"> 
+    <p class="posTit">重庆市从业人员预防性健康检查卡</p> 
+    <div class="people"> 
+     <div style="margin: 2.8px 0;">
+      <span style="font-size: 16px;">检查结果：</span>
+      <span style="font-size: 16px;font-weight: bold;">合格</span>
+     </div> 
+     <div> 
+      <ul> 
+       <li><span>细菌性痢疾：无</span></li> 
+       <li><span>伤寒：无</span></li> 
+       <li><span>甲肝：无</span></li> 
+       <li><span>戊肝：无</span></li> 
+       <li><span>活动性肺结核：无</span></li> 
+       <li><span>化脓性或渗出性皮肤病：无</span></li> 
+       <li><span>霍乱：无</span></li> 
+       <li><span>阿米巴性痢疾：无</span></li> 
+       <li><span>副伤寒：无</span></li> 
+       <li><span>手部真菌感染性疾病：</span></li> 
+       <li><span>手部湿疹：</span></li> 
+       <li><span>手部的银屑病或者鳞屑：</span></li> 
+      </ul> 
+     </div> 
+     <div>
+      <span style="font-size: 16px;font-weight: bold;">提示：</span>
+      <span style="font-size: 11px;">如遗失或损坏，请及时到体检机构补办。</span>
+     </div> 
+    </div> 
+    <p class="lins"></p> 
+    <p class="linss"></p> 
+    <div class="footer"> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="nav"> 
+   <a style="width: 100%;background: #68CAD5;color: #fff;position: fixed;bottom: 0;" href="javascript:" role="button" id="savePicture" class="setbutton weui-btn weui-btn_default"> 下载健康证</a> 
+  </div> 
+  <div class="show" style="display: none;width: 100%;height: 100%;background: #666666;position: absolute;top:15px;"> 
+   <!-- html中添加 --> 
+   <canvas id="myCanvas" width="200" height="100" style="display: none;"></canvas> 
+   <img id="11" src="/getDetail" style="margin: auto;width: 100%;"> 
+   <!--     <img id="11" src="" style="margin: auto;"> --> 
+   <div style="color: white;width: 100%;text-align: center;">
+    长按上图保存（轻点取消）[兼容A4纸]
+   </div> 
+  </div> 
+  <script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 70,
+        height : 70,
+        colorDark : "#000",
+        colorLight : "#ffffff"
+    });
+
+    function makeCode () {
+        var elText = window.location.protocol+"//"+window.location.host+"/occ/m/e/getDetail?id=26660";
+        qrcode.makeCode(elText);
+    }
+    makeCode();
+    //点击遮罩取消选中
+    $(".show").click(function () {
+        $(".show").hide();
+    })
+    
+    //生成遮罩预览图
+    $(".setbutton").click(function () {
+        html2canvas($(".navdemo"),{ // 以下字段可选
+//             width: 490, // canvas宽度
+//             height: 240, // canvas高度
+            x: 0, // x坐标
+            y: 0, // y坐标
+            foreignObjectRendering: true, // 是否在浏览器支持的情况下使用ForeignObject渲染
+            useCORS: true, // 是否尝试使用CORS从服务器加载图像
+            async: false, // 是否异步解析和呈现元素
+            // 以下字段必填
+            background: "#ffffff", // 一定要添加背景颜色，否则出来的图片，背景全部都是透明的
+            scale: 2, // 处理模糊问题
+            dpi: 300, // 处理模糊问题
+            onrendered: function(canvasimg) {
+            	var canvas=document.getElementById("myCanvas");
+                canvas.width = 794;
+                canvas.height = 1123;
+                var context = canvas.getContext("2d");
+                context.rect(0 , 0 , canvas.width , canvas.height);
+                context.fillStyle = "#ffffff";
+                context.fill();
+                var myImage = new Image();
+                myImage.src = canvasimg.toDataURL("image/png");  //背景图片 你自己本地的图片或者在线图片
+                myImage.onload = function(){
+                    context.drawImage(myImage , 200 , 260 , 390 , 445);
+                    $("#11").attr("src",canvas.toDataURL("image/png"));
+                    $(".show").show();
+                }
+            }
+          })
+    });
+</script>  
+ </body>
+</html>
